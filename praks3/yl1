@@ -1,0 +1,9 @@
+#!/bin/bash
+#
+# muutujate kasutamise näide
+#
+# definerime muutuja ja omamiste väärtusõ
+# väärtus saadakse whoami käsust
+kasutaja=`whoami`
+#väljastame muutuja väärtus koos seletusega
+echo "Tere, $kasutaja"
