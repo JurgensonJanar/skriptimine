@@ -9,4 +9,7 @@ kasutaja=`whoami`
 echo "Tere, $kasutaja"
 #
 kell=`date +"%H:%M"`
-eco "Kell on $kell"
+echo "Kell on $kell"
+# Loome ja väljastame kuupäeva
+kuupaev=`date +"%d. %B"`
+echo "Täna on $kuupäev"
