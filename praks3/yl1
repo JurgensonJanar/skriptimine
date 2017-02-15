@@ -7,3 +7,6 @@
 kasutaja=`whoami`
 #väljastame muutuja väärtus koos seletusega
 echo "Tere, $kasutaja"
+#
+kell=`date +"%H:%M"`
+eco "Kell on $kell"
