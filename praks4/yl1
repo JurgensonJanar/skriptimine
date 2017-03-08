@@ -1,21 +1,29 @@
 #!/bin/bash
 #
 # Kontroillime arvu positiivsuse olekut
-#
-# Küsime väärtused kasutaja käest
-echo -n "Sisesta arv: "
-read arv
-# Kontrollime, kas arv on positiivne
-# sel juhul peab olema suurem kui 0
-if [ $arv -gt 0 ] ; then
-    echo "$arv on positiivne"
-# eld tähendab juhul kui. Kui väärtus on negatiivne
-# siis arv peab olema väiksem kui 0
-elif [ $arv -lt 0 ] ; then
-   echo "$arv on negatiivne"
-# If lause tuleb korralikult lõpetada
-# Kui esimene tingimus või teine tingumus ei sobinud siis kasuta else osa
+# kontrollikme kas kasutaja sisestas käsurea kaudu 1 parameetri
+# Kui mitte - trükime välja kasutusjuhendi
+if [ $# -ne 1 ]; then
+   echo "kasutusjuhend:"
+   echo "$0 number"
+   echo "Näiteks: 5"
+# kui aga sisestadu korralikult 1 parameeteri siis
 else
-   echo "$arv on neutraalne"
-# if lause tuleb korralikult lõpetada
+	# sisestame väärtused käsurea kaudu
+	arv=$1
+	# Kontrollime, kas arv on positiivne
+	# sel juhul peab olema suurem kui 0
+	if [ $arv -gt 0 ] ; then
+		    echo "$arv on positiivne"
+	# eld tähendab juhul kui. Kui väärtus on negatiivne
+	# siis arv peab olema väiksem kui 0
+	elif [ $arv -lt 0 ] ; then
+		   echo "$arv on negatiivne"
+	# If lause tuleb korralikult lõpetada
+	# Kui esimene tingimus või teine tingumus ei sobinud siis kasuta else osa
+	else
+		   echo "$arv on neutraalne"
+	# if lause tuleb korralikult lõpetada
+	fi
+# Väline if lause tuleb kaa korralikult lõpetada
 fi
