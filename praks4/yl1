@@ -1,0 +1,18 @@
+#!/bin/bash
+#
+# Kontroillime arvu positiivsuse olekut
+#
+# Küsime väärtused kasutaja käest
+echo -n "Sisesta arv: "
+read arv
+# Kontrollime, kas arv on positiivne
+# sel juhul peab olema suurem kui 0
+if [ $arv -gt 0 ]
+then
+    echo "$arv on positiivne"
+# Kui väärtus on negatiivne
+# siis arv peab olema väiksem kui 0
+else
+   echo "$arv on negatiivne"
+# If lause tuleb korralikult lõpetada
+fi
