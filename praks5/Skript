@@ -1,10 +1,13 @@
 #!/bin/bash
 #
-
-for (( i = 1; i<= 5; i++ ))
+echo "Sisesta ridade arv:"
+read arv 
+echo "sisesta tärnide arv:"
+read tarv
+for (( i = 1; i <= $arv; i++ ))
 do
 	echo -n "$i. "
-	for (( j = 1 ; j <= 4; j++ ))
+	for (( j = 1 ; j <=$tarv ; j++ ))
 	do
 		echo -n "* "
 	done
